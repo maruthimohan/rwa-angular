@@ -20,8 +20,9 @@ export class TagsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.sub)
+    if (this.sub) {
       this.sub.unsubscribe();
+    }
   }
 
 }

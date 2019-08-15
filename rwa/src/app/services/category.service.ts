@@ -15,7 +15,7 @@ export class CategoryService {
   }
 
   getCategories(): Observable<Category[]> {
-    let url = this._serviceUrl;
+    const url = this._serviceUrl;
     return this.http.get(url)
                .pipe(map(res => res as Category[]));
   }

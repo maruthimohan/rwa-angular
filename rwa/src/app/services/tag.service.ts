@@ -13,7 +13,7 @@ export class TagService {
   }
 
   getTags(): Observable<string[]> {
-    let url = this._serviceUrl;
+    const url = this._serviceUrl;
     return this.http.get(url)
                .pipe(map(res => res as string[]));
   }
