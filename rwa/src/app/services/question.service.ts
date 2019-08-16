@@ -25,19 +25,26 @@ export class QuestionService {
   getQuestions(): Observable<Question[]> {
     const url = this._serviceUrl;
     return forkJoin(
-        this.http.get(url).pipe(map<any, Question[]>(res => res)),
-        this.categoryService.getCategories())
-        .pipe(
-          map((combined, index) => {
-            const questions: Question[] = combined[0];
-            const categories: Category[] = combined[1];
-            questions.forEach(q => {
-              q.categories = [];
-              q.categoryIds.forEach(id => q.categories.push(categories.find(element => element.id === id)));
-            });
-            return questions;
-          })
-        );
-      }
+      this.http.get(url).pipe(map<any, Question[]>(res => res)),
+      this.categoryService.getCategories())
+      .pipe(
+        map((combined, index) => {
+          const questions: Question[] = combined[0];
+          const categories: Category[] = combined[1];
+          questions.forEach(q => {
+            q.categories = [];
+            q.categoryIds.forEach(id => q.categories.push(categories.find(element => element.id === id)));
+          });
+          return questions;
+        })
+      );
+  }
+
+    saveQuestion(question: Question): Observable<Question> {
+      const url = this._serviceUrl;
+
+      return this.http.post(url, question)
+                  .pipe(map(res => res as Question));
+    }
 
 }

@@ -1,4 +1,8 @@
 <mat-card>
+  <!-- <button md-fab class="page-action" [routerLink]="['/question/add']">
+    <mat-icon class="mat-24" [routerLink]="['/question/add']">add</mat-icon>
+  </button> -->
+  <button mat-fab class="page-action" [routerLink]="['/question/add']">Add</button>
   <mat-card-title>Questions</mat-card-title>
   <mat-card-content class="flex-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutAlign.xs="start">
     <mat-card *ngFor="let question of questions" class="flex-item question-card">

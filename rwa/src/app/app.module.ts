@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,18 +14,23 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { QuestionAddUpdateComponent } from './components/question-add-update/question-add-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionsComponent,
     CategoriesComponent,
-    TagsComponent
+    TagsComponent,
+    QuestionAddUpdateComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     FormsModule,
+    ReactiveFormsModule,
+
     HttpClientModule,
     HttpModule,
     AppRoutingModule,
