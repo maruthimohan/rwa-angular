@@ -210,25 +210,20 @@
     },
     {
       "id": 2,
-      "questionText": "Which of the following function of Array object calls a function for each element in the array?",
       "answers": [
         {
-          "id": 1,
           "answerText": "concat()",
           "correct": false
         },
         {
-          "id": 2,
           "answerText": "every()",
           "correct": false
         },
         {
-          "id": 3,
           "answerText": "filter()",
           "correct": false
         },
         {
-          "id": 4,
           "answerText": "forEach()",
           "correct": true
         }
@@ -236,11 +231,17 @@
       "ordered": false,
       "tags": [
         "JavaScript",
-        "front-end"
+        "front-end",
+        "ES5"
       ],
+      "categories": [],
       "categoryIds": [
         2
-      ]
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "Which of the following function of Array object calls a function for each element in the array?",
+      "explanation": null
     },
     {
       "id": 3,

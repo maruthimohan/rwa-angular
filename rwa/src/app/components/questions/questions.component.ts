@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 
 import { Question } from '../../model';
 import { QuestionService } from '../../services';
+import { MatSnackBar } from '@angular/material';
+import { CustomSnackBarComponent } from '../custom-snack-bar/custom-snack-bar.component';
 
 @Component({
   selector: 'question-list',
@@ -13,12 +15,32 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   questions: Question[];
   sub: any;
 
-  constructor(private questionService: QuestionService) {
+  constructor(private questionService: QuestionService,
+              private _snack: MatSnackBar) {
   }
 
   ngOnInit() {
     this.sub = this.questionService.getQuestions()
                    .subscribe(questions => this.questions = questions);
+  }
+
+  deleteQuestion(questionId: string) {
+    alert('Deleting question ID: ');
+    alert(questionId);
+    // Delete this question using the ID sent
+    this.questionService.deleteQuestion(questionId).subscribe(
+      response => {
+        console.log(`Question with Id ${questionId} has been deleted.`);
+        this._snack.openFromComponent(CustomSnackBarComponent,
+            {
+              data : `Question ${questionId} has been deleted!`
+            }
+        );
+        // Open a subscription to fetch the updated list of question records from JSON file
+        this.questionService.getQuestions()
+                   .subscribe(questions => this.questions = questions);
+      }
+    );
   }
 
   ngOnDestroy() {

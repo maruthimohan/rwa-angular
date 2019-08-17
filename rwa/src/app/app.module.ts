@@ -17,6 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuestionAddUpdateComponent } from './components/question-add-update/question-add-update.component';
 
 import 'hammerjs';
+import { CustomSnackBarComponent } from './components/custom-snack-bar/custom-snack-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import 'hammerjs';
     QuestionsComponent,
     CategoriesComponent,
     TagsComponent,
-    QuestionAddUpdateComponent
+    QuestionAddUpdateComponent,
+    CustomSnackBarComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,9 @@ import 'hammerjs';
 
     MaterialModule,
     FlexLayoutModule
+  ],
+  entryComponents: [
+    CustomSnackBarComponent
   ],
   providers: [
     CategoryService, TagService, QuestionService
