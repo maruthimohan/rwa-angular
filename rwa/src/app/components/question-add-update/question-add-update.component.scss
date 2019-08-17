@@ -16,3 +16,20 @@ mat-card-actions {
 .prefix-spacing-right {
   margin-right: 50px;
 }
+.remove-tag {
+  cursor: pointer;
+}
+::ng-deep mat-form-field.ng-invalid.ng-touched .md-input-underline {
+  border-color: red;
+}
+::ng-deep mat-hint.error, .error {
+  color: red;
+}
+.mat-icon {
+  font-size: 18px;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  margin-left: 5px;
+  vertical-align: middle;
+}

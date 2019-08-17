@@ -16,6 +16,8 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { QuestionAddUpdateComponent } from './components/question-add-update/question-add-update.component';
 
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,

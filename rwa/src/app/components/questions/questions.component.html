@@ -28,6 +28,22 @@
           </mat-chip>
         </mat-chip-list>
       </mat-card-content>
+      <mat-card-actions [ngClass]="{'question-actions' : true}">
+        <button mat-icon-button
+                matTooltip="Edit this Question"
+                [matTooltipPosition]="'above'"
+                color="primary"
+                [routerLink]="['/question/add']" routerLinkActive="router-link-active" [queryParams]="{ question_id: question.id }"
+                [ngClass]="{'add-question': true}">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button
+                matTooltip="Delete this Question"
+                [matTooltipPosition]="'above'"
+                [ngClass]="{'delete-question': true}">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
     </mat-card>
   </mat-card-content>
 </mat-card>

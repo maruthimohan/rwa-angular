@@ -1,5 +1,5 @@
 <mat-card>
-    <form (ngSubmit)="onSubmit()" class="question-form" [formGroup]="questionForm" novalidate>
+    <form *ngIf="question && tags && categories" (ngSubmit)="onSubmit()" class="question-form" [formGroup]="questionForm" novalidate>
       <mat-card-title>Add Question</mat-card-title>
       <mat-card-header>
         <mat-card-title>
@@ -24,7 +24,7 @@
         <div formArrayName="answers" class="well well-lg">
           <div *ngFor="let answer of answers.controls; let i=index" [formGroupName]="i" >
             <mat-form-field class="full-width">
-              <mat-checkbox mat-prefix formControlName="correct"></mat-checkbox>
+              <mat-checkbox matPrefix formControlName="correct" class="prefix-spacing-right"></mat-checkbox>
               <input matInput [placeholder]="'Answer ' + (i+1)" formControlName="answerText" />
               <mat-hint align="end" *ngIf="answers.controls[i].controls.answerText.errors && !answers.controls[i].controls.answerText.pristine" class="error">Answer required</mat-hint>
             </mat-form-field>
@@ -55,7 +55,7 @@
             {{tag}}
           </mat-chip>
           <mat-chip *ngFor="let tag of enteredTags">
-            {{tag}}  <span (click)="removeEnteredTag(tag)" class="remove-tag">x</span>
+            {{tag}}  <span (click)="removeEnteredTag(tag)" class="remove-tag"><mat-icon>close</mat-icon></span>
           </mat-chip>
         </mat-chip-list>
       </mat-card-content>
@@ -65,7 +65,7 @@
 
       <mat-card-actions>
         <button mat-button color="primary" type="submit" [disabled]="!questionForm.valid">SAVE</button>
-        <button mat-button>CANCEL</button>
+        <button mat-button [routerLink]="['/questions']" routerLinkActive="router-link-active" >CANCEL</button>
       </mat-card-actions>
     </form>
   </mat-card>
