@@ -1,4 +1,8 @@
 <mat-card>
+  <!-- <button md-fab class="page-action" [routerLink]="['/question/add']">
+    <mat-icon class="mat-24" [routerLink]="['/question/add']">add</mat-icon>
+  </button> -->
+  <button mat-fab class="page-action" [routerLink]="['/question/add']">Add</button>
   <mat-card-title>Questions</mat-card-title>
   <mat-card-content class="flex-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutAlign.xs="start">
     <mat-card *ngFor="let question of questions" class="flex-item question-card">
@@ -24,6 +28,22 @@
           </mat-chip>
         </mat-chip-list>
       </mat-card-content>
+      <mat-card-actions [ngClass]="{'question-actions' : true}">
+        <button mat-icon-button
+                matTooltip="Edit this Question"
+                [matTooltipPosition]="'above'"
+                [routerLink]="['/question/add']" routerLinkActive="router-link-active" [queryParams]="{ question_id: question.id }"
+                [ngClass]="{'add-question': true}">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button
+                matTooltip="Delete this Question"
+                [matTooltipPosition]="'above'"
+                (click)="deleteQuestion(question.id)"
+                [ngClass]="{'delete-question': true}">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
     </mat-card>
   </mat-card-content>
 </mat-card>
