@@ -525,6 +525,41 @@
       "status": 0,
       "questionText": "Which tool is the most widely used version control tool and code hosting platform?",
       "explanation": "As per my knowledge, Git and GitHub are the most widely used Version Control tool and Code Platform combinations across the developer forums and stuff."
+    },
+    {
+      "id": 11,
+      "answers": [
+        {
+          "answerText": "Redux",
+          "correct": true
+        },
+        {
+          "answerText": "Redux Middleware",
+          "correct": false
+        },
+        {
+          "answerText": "RxJS",
+          "correct": false
+        },
+        {
+          "answerText": "Observable",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": [
+        "Redux",
+        "React",
+        "State"
+      ],
+      "categories": [],
+      "categoryIds": [
+        2
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "Which is the state management software used by React or Angular?",
+      "explanation": "Redux is the state management software provides patterns for neat data handling in the application."
     }
   ]
 }

@@ -25,15 +25,14 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   }
 
   deleteQuestion(questionId: string) {
-    alert('Deleting question ID: ');
-    alert(questionId);
     // Delete this question using the ID sent
     this.questionService.deleteQuestion(questionId).subscribe(
       response => {
         console.log(`Question with Id ${questionId} has been deleted.`);
         this._snack.openFromComponent(CustomSnackBarComponent,
             {
-              data : `Question ${questionId} has been deleted!`
+              data : `Question ${questionId} has been deleted!`,
+              duration: 2000
             }
         );
         // Open a subscription to fetch the updated list of question records from JSON file

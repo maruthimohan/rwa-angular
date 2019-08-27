@@ -32,7 +32,6 @@
         <button mat-icon-button
                 matTooltip="Edit this Question"
                 [matTooltipPosition]="'above'"
-                color="primary"
                 [routerLink]="['/question/add']" routerLinkActive="router-link-active" [queryParams]="{ question_id: question.id }"
                 [ngClass]="{'add-question': true}">
           <mat-icon>edit</mat-icon>
