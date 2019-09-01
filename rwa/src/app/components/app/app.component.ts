@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CategoryActions} from '../../store/actions';
+import {CategoryActions, QuestionActions, TagActions} from '../../store/actions';
 import {AppStore} from '../../store/app-store';
 import {Store} from '@ngrx/store';
 
@@ -17,5 +17,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.store.dispatch(CategoryActions.loadCategoriesAction());
+        this.store.dispatch(TagActions.loadTagsAction());
+        this.store.dispatch(QuestionActions.loadQuestions());
     }
 }

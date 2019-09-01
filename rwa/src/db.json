@@ -461,11 +461,11 @@
       "answers": [
         {
           "answerText": "Floating Action Button (FAB)s",
-          "correct": null
+          "correct": false
         },
         {
           "answerText": "Raised Buttons",
-          "correct": null
+          "correct": false
         },
         {
           "answerText": "Flat Buttons and Icon Buttons",
@@ -473,7 +473,7 @@
         },
         {
           "answerText": "Emphasized Buttons",
-          "correct": null
+          "correct": false
         }
       ],
       "ordered": false,
@@ -560,6 +560,202 @@
       "status": 0,
       "questionText": "Which is the state management software used by React or Angular?",
       "explanation": "Redux is the state management software provides patterns for neat data handling in the application."
+    },
+    {
+      "id": 12,
+      "answers": [
+        {
+          "answerText": "Singleton",
+          "correct": true
+        },
+        {
+          "answerText": "MultipleTon",
+          "correct": false
+        },
+        {
+          "answerText": "Facade",
+          "correct": false
+        },
+        {
+          "answerText": "Observer Pattern",
+          "correct": false
+        }
+      ],
+      "ordered": true,
+      "tags": [
+        "Pattern",
+        "Object Oriented Principles",
+        "Java"
+      ],
+      "categories": [],
+      "categoryIds": [
+        2
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "Which design pattern would you use to initialize the object once during the entire application lifecycle?",
+      "explanation": null
+    },
+    {
+      "id": 19,
+      "answers": [
+        {
+          "answerText": "They are awesome",
+          "correct": false
+        },
+        {
+          "answerText": "They facilitate easier and type-safe action creation framework",
+          "correct": true
+        },
+        {
+          "answerText": "They are not so good",
+          "correct": false
+        },
+        {
+          "answerText": "They are not as useful as the class based action creators",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": [
+        "Actions",
+        "Ngrx",
+        "Store"
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "categoryName": "Special"
+        }
+      ],
+      "categoryIds": [
+        1
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "What is so special about Actions in Ngrx?",
+      "explanation": null
+    },
+    {
+      "id": 20,
+      "answers": [
+        {
+          "answerText": "Ternary Trees",
+          "correct": false
+        },
+        {
+          "answerText": "Binary Trees",
+          "correct": false
+        },
+        {
+          "answerText": "Unary Trees",
+          "correct": false
+        },
+        {
+          "answerText": "Linked Lists",
+          "correct": true
+        }
+      ],
+      "ordered": true,
+      "tags": [
+        "Data",
+        "Data Structures",
+        "Trees"
+      ],
+      "categories": [
+        {
+          "id": 2,
+          "categoryName": "Programming"
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "Which is the best data structure used for dictionary?",
+      "explanation": null
+    },
+    {
+      "id": 21,
+      "answers": [
+        {
+          "answerText": "test 1",
+          "correct": false
+        },
+        {
+          "answerText": "test 2",
+          "correct": false
+        },
+        {
+          "answerText": "test 3",
+          "correct": false
+        },
+        {
+          "answerText": "test 4 correct answer",
+          "correct": true
+        }
+      ],
+      "ordered": false,
+      "tags": [
+        "asd",
+        "asdfas",
+        "sdfa"
+      ],
+      "categories": [
+        {
+          "id": 4,
+          "categoryName": "Networking/Infrastructure"
+        }
+      ],
+      "categoryIds": [
+        4
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "This is a test question that we have added to make use of the August 31 at 1:48 AM?",
+      "explanation": "asd"
+    },
+    {
+      "id": 22,
+      "answers": [
+        {
+          "answerText": "SELECT *",
+          "correct": true
+        },
+        {
+          "answerText": "SELECT ALL",
+          "correct": false
+        },
+        {
+          "answerText": "SELECT _",
+          "correct": false
+        },
+        {
+          "answerText": "SELECT ..fields",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": [
+        "SQL",
+        "1",
+        "2",
+        "3"
+      ],
+      "categories": [
+        {
+          "id": 5,
+          "categoryName": "Database"
+        }
+      ],
+      "categoryIds": [
+        5
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "Which query would retrieve all the fields from a table in SQL?",
+      "explanation": "SELECT * FROM Account - would give all the fields in the object from the Table."
     }
   ]
 }

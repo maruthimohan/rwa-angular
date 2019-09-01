@@ -5,13 +5,16 @@ import { map, catchError, debounceTime, distinctUntilChanged, filter, switchMap 
 import '../rxjs-extensions';
 
 import { Category } from '../model/category';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {AngularFireDatabase} from '@angular/fire/database';
 
 @Injectable()
 export class CategoryService {
 
   private _serviceUrl = 'http://localhost:3000/categories';  // URL to web api
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private angularFire: AngularFireDatabase) {
   }
 
   getCategories(): Observable<Category[]> {

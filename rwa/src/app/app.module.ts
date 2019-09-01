@@ -23,9 +23,22 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 
 import {CategoryActions} from './store/actions';
-import {CategoryReducers} from './store/reducers';
-import {CategoryEffects} from './store/effects';
+import {CategoryReducers, TagReducers, QuestionReducers} from './store/reducers';
+import {CategoryEffects, TagEffects, QuestionEffects} from './store/effects';
 import {default as reducer} from './store/app-store';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+
+export const firebaseConfig = {
+    apiKey: 'AIzaSyCFA2RFVAYZAfUaiwx_sjAuLYGPGoPuA-w',
+    authDomain: 'rwa-angular-project-1.firebaseapp.com',
+    databaseURL: 'https://rwa-angular-project-1.firebaseio.com',
+    projectId: 'rwa-angular-project-1',
+    storageBucket: 'rwa-angular-project-1.appspot.com',
+    messagingSenderId: '376790856109',
+    appId: '1:376790856109:web:e7b137ca3b0f3399'
+};
 
 @NgModule({
     declarations: [
@@ -49,8 +62,19 @@ import {default as reducer} from './store/app-store';
         MaterialModule,
         FlexLayoutModule,
 
-        StoreModule.forRoot({categories: CategoryReducers.reducer}),
-        EffectsModule.forRoot([CategoryEffects])
+        AngularFireModule.initializeApp(firebaseConfig, 'rwa-angular'),
+        AngularFireDatabaseModule,
+
+        StoreModule.forRoot({
+            categories: CategoryReducers.reducer,
+            tags: TagReducers.reducer,
+            categoriesDictionary: CategoryReducers.dictReducer,
+            questions: QuestionReducers.reducer,
+            questionSaveStatus: QuestionReducers.questionSaveReducer,
+            questionDeleteStatus: QuestionReducers.questionDeleteReducer
+        }),
+
+        EffectsModule.forRoot([CategoryEffects, TagEffects, QuestionEffects])
     ],
     entryComponents: [
         CustomSnackBarComponent

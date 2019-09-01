@@ -8,8 +8,8 @@
     <mat-card *ngFor="let question of questions" class="flex-item question-card">
       <mat-card-header>
         <mat-card-title>
-          <span *ngFor="let category of question.categories">
-            {{category.categoryName}}
+          <span *ngFor="let categoryId of question.categoryIds">
+            {{categoriesDictionary[categoryId].categoryName}}
           </span>
         </mat-card-title>
         <mat-card-subtitle>
@@ -39,7 +39,7 @@
         <button mat-icon-button
                 matTooltip="Delete this Question"
                 [matTooltipPosition]="'above'"
-                (click)="deleteQuestion(question.id)"
+                (click)="deleteQuestion((question.id))"
                 [ngClass]="{'delete-question': true}">
           <mat-icon>delete</mat-icon>
         </button>

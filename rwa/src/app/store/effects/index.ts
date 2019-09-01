@@ -1,9 +1,15 @@
 import {CategoryEffects} from './category.effects';
+import {TagEffects} from './tag.effects';
+import {QuestionEffects} from './question.effects';
 
 export {
-    CategoryEffects
+    CategoryEffects,
+    TagEffects,
+    QuestionEffects
 };
 
 export default [
-    CategoryEffects
+    CategoryEffects,
+    TagEffects,
+    QuestionEffects
 ];
