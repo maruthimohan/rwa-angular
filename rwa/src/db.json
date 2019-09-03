@@ -175,38 +175,19 @@
   "questions": [
     {
       "id": 1,
-      "questionText": "Which of the following function of Array object reverses the order of the elements of an array?",
-      "answers": [
-        {
-          "id": 1,
-          "answerText": "reverse()",
-          "correct": true
-        },
-        {
-          "id": 2,
-          "answerText": "push()",
-          "correct": false
-        },
-        {
-          "id": 3,
-          "answerText": "reduce()",
-          "correct": false
-        },
-        {
-          "id": 4,
-          "answerText": "reduceRight()",
-          "correct": false
-        }
-      ],
-      "ordered": false,
       "tags": [
         "JavaScript",
         "front-end",
         "ES5"
       ],
+      "categories": [
+        null
+      ],
       "categoryIds": [
-        2
-      ]
+        null
+      ],
+      "published": false,
+      "status": 0
     },
     {
       "id": 2,
