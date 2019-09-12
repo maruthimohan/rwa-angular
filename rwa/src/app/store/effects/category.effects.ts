@@ -18,8 +18,8 @@ export class CategoryEffects {
         mergeMap(() => this.categoryService.getCategories()
             .pipe(
                 tap( categories => {
-                    console.log('Categories returned: ');
-                    console.log(categories);
+                    // console.log('Categories returned: ');
+                    // console.log(categories);
                 }),
                 map(categories => CategoryActions.loadCategoriesSuccessAction({ categories })),
                 catchError(() => EMPTY)

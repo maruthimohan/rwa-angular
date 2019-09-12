@@ -17,6 +17,8 @@ import {QuestionActions} from '../../store/actions';
     styleUrls: ['./questions.component.scss']
 })
 export class QuestionsComponent implements OnInit, OnDestroy {
+    // Local variable to access the Object global namespace
+    Object = Object;
     questions: Question[];
     categoriesDictionary: { [key: number]: Category } = {};
     store$: Observable<Question[]>;
@@ -44,13 +46,9 @@ export class QuestionsComponent implements OnInit, OnDestroy {
         //     .subscribe(questions => this.questions = questions);
         this.sub = this.store$.subscribe((questions) => {
             this.questions = questions;
-            console.log('this.questions in questions component html');
-            console.log(this.questions);
         });
         this.categoriesDict$.subscribe((dictionary) => {
             this.categoriesDictionary = dictionary;
-            console.log('this.categoriesDictionary in questions component html');
-            console.log(this.categoriesDictionary);
         });
     }
 

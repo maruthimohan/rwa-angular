@@ -15,7 +15,7 @@ export class TagEffects {
 
 
     loadTags$ = createEffect(() => this.actions$.pipe(
-        ofType(TagActions.LOAD_TAGS),
+        ofType(TagActions.loadTagsAction),
         mergeMap(() => this.tagService.getTags()
             .pipe(
                 map((tags) => TagActions.loadTagsSuccessAction({tags})),

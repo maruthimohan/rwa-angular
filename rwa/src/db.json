@@ -1,32 +1,584 @@
 {
   "categories": [
     {
+      "categoryName": "Special",
+      "id": 1
+    },
+    {
+      "categoryName": "Programming",
+      "id": 2
+    },
+    {
+      "categoryName": "Architecture",
+      "id": 3
+    },
+    {
+      "categoryName": "Networking/Infrastructure",
+      "id": 4
+    },
+    {
+      "categoryName": "Database",
+      "id": 5
+    },
+    {
+      "categoryName": "Dev Ops",
+      "id": 6
+    },
+    {
+      "categoryName": "UX/UI",
+      "id": 7
+    }
+  ],
+  "questions": [
+    {
+      "answers": [
+        {
+          "answerText": "reverse()",
+          "correct": true,
+          "id": 1
+        },
+        {
+          "answerText": "push()",
+          "correct": false,
+          "id": 2
+        },
+        {
+          "answerText": "reduce()",
+          "correct": false,
+          "id": 3
+        },
+        {
+          "answerText": "reduceRight()",
+          "correct": false,
+          "id": 4
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
       "id": 1,
-      "categoryName": "Special"
+      "ordered": false,
+      "questionText": "Which of the following function of Array object reverses the order of the elements of an array?",
+      "tags": [
+        "JavaScript",
+        "front-end",
+        "ES5"
+      ]
     },
     {
+      "answers": [
+        {
+          "answerText": "concat()",
+          "correct": false
+        },
+        {
+          "answerText": "every()",
+          "correct": false
+        },
+        {
+          "answerText": "filter()",
+          "correct": false
+        },
+        {
+          "answerText": "forEach()",
+          "correct": true
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
       "id": 2,
-      "categoryName": "Programming"
+      "ordered": false,
+      "published": false,
+      "questionText": "Which of the following function of Array object calls a function for each element in the array?",
+      "status": 0,
+      "tags": [
+        "JavaScript",
+        "front-end",
+        "ES5"
+      ]
     },
     {
+      "answers": [
+        {
+          "answerText": "firstIndexOf()",
+          "correct": false,
+          "id": 1
+        },
+        {
+          "answerText": "lastIndexOf()",
+          "correct": false,
+          "id": 2
+        },
+        {
+          "answerText": "indexOf()",
+          "correct": true,
+          "id": 3
+        },
+        {
+          "answerText": "search()",
+          "correct": false,
+          "id": 4
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
       "id": 3,
-      "categoryName": "Architecture"
+      "ordered": false,
+      "questionText": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "tags": [
+        "JavaScript"
+      ]
     },
     {
+      "answers": [
+        {
+          "answerText": "valueOf()",
+          "correct": false
+        },
+        {
+          "answerText": "toSource()",
+          "correct": true
+        },
+        {
+          "answerText": "indexOf()",
+          "correct": false
+        },
+        {
+          "answerText": "toString()",
+          "correct": false
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
       "id": 4,
-      "categoryName": "Networking/Infrastructure"
+      "ordered": false,
+      "published": false,
+      "questionText": "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
+      "status": 0,
+      "tags": [
+        "JavaScript",
+        "Boolean",
+        "JS"
+      ]
     },
     {
+      "answers": [
+        {
+          "answerText": "JavaScript can manipulate cookies using the cookie property of the Document object.",
+          "correct": false,
+          "id": 1
+        },
+        {
+          "answerText": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
+          "correct": false,
+          "id": 2
+        },
+        {
+          "answerText": "All of the above.",
+          "correct": true,
+          "id": 3
+        },
+        {
+          "answerText": "None of the above.",
+          "correct": false,
+          "id": 4
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
       "id": 5,
-      "categoryName": "Database"
+      "ordered": true,
+      "questionText": "Which of the following is true about cookie handling in JavaScript?",
+      "tags": [
+        "JavaScript",
+        "ES5"
+      ]
     },
     {
+      "answers": [
+        {
+          "answerText": "Quiz Up",
+          "correct": false,
+          "id": 1
+        },
+        {
+          "answerText": "Trivia Crack",
+          "correct": false,
+          "id": 2
+        },
+        {
+          "answerText": "The one I'm playing",
+          "correct": true,
+          "id": 3
+        },
+        {
+          "answerText": "It's subjective",
+          "correct": false,
+          "id": 4
+        }
+      ],
+      "categoryIds": [
+        1
+      ],
       "id": 6,
-      "categoryName": "Dev Ops"
+      "ordered": false,
+      "questionText": "What's the best Trivia game?",
+      "tags": [
+        "gaming"
+      ]
     },
     {
+      "answers": [
+        {
+          "answerText": "Java",
+          "correct": false
+        },
+        {
+          "answerText": "Jeeva",
+          "correct": true
+        },
+        {
+          "answerText": "Apex",
+          "correct": false
+        },
+        {
+          "answerText": "Visualforce",
+          "correct": false
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
+      "explanation": "Apex is a proprietary language used by Salesforce.com based on the open source Java language.",
       "id": 7,
-      "categoryName": "UX/UI"
+      "ordered": false,
+      "published": false,
+      "questionText": "Which is proprietary programming language used by Salesforce.com",
+      "status": 0,
+      "tags": [
+        "Java",
+        "Salesforce",
+        "Apex",
+        "Visualforce",
+        "SFDC"
+      ]
+    },
+    {
+      "answers": [
+        {
+          "answerText": "C++ and Swift",
+          "correct": false
+        },
+        {
+          "answerText": "Objective-C and Swift",
+          "correct": true
+        },
+        {
+          "answerText": "Java and JavaScript",
+          "correct": false
+        },
+        {
+          "answerText": "HTML and CSS",
+          "correct": false
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
+      "explanation": "Objective-c and Swift are the two proprietary programming languages developed by Apple. Apple is a mastermind in trapping you in their ecosystem by producing brilliant products.",
+      "id": 8,
+      "ordered": true,
+      "published": false,
+      "questionText": "What languages introduced by Apple are used to write Apps for iOS?",
+      "status": 0,
+      "tags": [
+        "iOS",
+        "Objective-C",
+        "Swift",
+        "Java",
+        "C",
+        "JavaScript",
+        "iPhone",
+        "Apple",
+        "iPad"
+      ]
+    },
+    {
+      "answers": [
+        {
+          "answerText": "Floating Action Button (FAB)s",
+          "correct": false
+        },
+        {
+          "answerText": "Raised Buttons",
+          "correct": false
+        },
+        {
+          "answerText": "Flat Buttons and Icon Buttons",
+          "correct": true
+        },
+        {
+          "answerText": "Emphasized Buttons",
+          "correct": false
+        }
+      ],
+      "categoryIds": [
+        7
+      ],
+      "explanation": "There are a couple of options possible for the destructive actions. But for sure you shouldn't use FABs, Raised or Emphasized Buttons for destructive actions.",
+      "id": 9,
+      "ordered": false,
+      "published": false,
+      "questionText": "What are few best possible options for destructive actions on the UI?",
+      "status": 0,
+      "tags": [
+        "UI",
+        "UX",
+        "Material Design"
+      ]
+    },
+    {
+      "answers": [
+        {
+          "answerText": "Git and BitBucket",
+          "correct": false
+        },
+        {
+          "answerText": "Git and GitLab",
+          "correct": false
+        },
+        {
+          "answerText": "SVN and GitHub",
+          "correct": false
+        },
+        {
+          "answerText": "Git and GitHub",
+          "correct": true
+        }
+      ],
+      "categoryIds": [
+        6
+      ],
+      "explanation": "As per my knowledge, Git and GitHub are the most widely used Version Control tool and Code Platform combinations across the developer forums and stuff.",
+      "id": 10,
+      "ordered": true,
+      "published": false,
+      "questionText": "Which tool is the most widely used version control tool and code hosting platform?",
+      "status": 0,
+      "tags": [
+        "GIT",
+        "GitHub",
+        "Version Control"
+      ]
+    },
+    {
+      "id": 11,
+      "tags": [
+        "Redux",
+        "React",
+        "State"
+      ],
+      "categoryIds": [
+        7
+      ],
+      "published": false,
+      "status": 0
+    },
+    {
+      "answers": [
+        {
+          "answerText": "Singleton",
+          "correct": true
+        },
+        {
+          "answerText": "MultipleTon",
+          "correct": false
+        },
+        {
+          "answerText": "Facade",
+          "correct": false
+        },
+        {
+          "answerText": "Observer Pattern",
+          "correct": false
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
+      "id": 12,
+      "ordered": true,
+      "published": false,
+      "questionText": "Which design pattern would you use to initialize the object once during the entire application lifecycle?",
+      "status": 0,
+      "tags": [
+        "Pattern",
+        "Object Oriented Principles",
+        "Java"
+      ]
+    },
+    {
+      "answers": [
+        {
+          "answerText": "They are awesome",
+          "correct": false
+        },
+        {
+          "answerText": "They facilitate easier and type-safe action creation framework",
+          "correct": true
+        },
+        {
+          "answerText": "They are not so good",
+          "correct": false
+        },
+        {
+          "answerText": "They are not as useful as the class based action creators",
+          "correct": false
+        }
+      ],
+      "categories": [
+        {
+          "categoryName": "Special",
+          "id": 1
+        }
+      ],
+      "categoryIds": [
+        1
+      ],
+      "id": 19,
+      "ordered": false,
+      "published": false,
+      "questionText": "What is so special about Actions in Ngrx?",
+      "status": 0,
+      "tags": [
+        "Actions",
+        "Ngrx",
+        "Store"
+      ]
+    },
+    {
+      "answers": [
+        {
+          "answerText": "Ternary Trees",
+          "correct": false
+        },
+        {
+          "answerText": "Binary Trees",
+          "correct": false
+        },
+        {
+          "answerText": "Unary Trees",
+          "correct": false
+        },
+        {
+          "answerText": "Linked Lists",
+          "correct": true
+        }
+      ],
+      "categories": [
+        {
+          "categoryName": "Programming",
+          "id": 2
+        }
+      ],
+      "categoryIds": [
+        2
+      ],
+      "id": 20,
+      "ordered": true,
+      "published": false,
+      "questionText": "Which is the best data structure used for dictionary?",
+      "status": 0,
+      "tags": [
+        "Data",
+        "Data Structures",
+        "Trees"
+      ]
+    },
+    {
+      "answers": [
+        {
+          "answerText": "test 1",
+          "correct": false
+        },
+        {
+          "answerText": "test 2",
+          "correct": false
+        },
+        {
+          "answerText": "test 3",
+          "correct": false
+        },
+        {
+          "answerText": "test 4 correct answer",
+          "correct": true
+        }
+      ],
+      "categories": [
+        {
+          "categoryName": "Networking/Infrastructure",
+          "id": 4
+        }
+      ],
+      "categoryIds": [
+        4
+      ],
+      "explanation": "asd",
+      "id": 21,
+      "ordered": false,
+      "published": false,
+      "questionText": "This is a test question that we have added to make use of the August 31 at 1:48 AM?",
+      "status": 0,
+      "tags": [
+        "asd",
+        "asdfas",
+        "sdfa"
+      ]
+    },
+    {
+      "id": 22,
+      "answers": [
+        {
+          "answerText": "SELECT *",
+          "correct": true
+        },
+        {
+          "answerText": "SELECT ALL",
+          "correct": false
+        },
+        {
+          "answerText": "SELECT _",
+          "correct": false
+        },
+        {
+          "answerText": "SELECT ..fields",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": [
+        "SQL",
+        "1",
+        "2",
+        "3"
+      ],
+      "categories": [
+        {
+          "categoryName": "Database",
+          "id": 5
+        }
+      ],
+      "categoryIds": [
+        5
+      ],
+      "published": false,
+      "status": 0,
+      "questionText": "Which query would retrieve all the fields from a table in SQL?",
+      "explanation": "SELECT * FROM Account - would give all the fields in the object from the Table."
     }
   ],
   "tagList": [
@@ -171,572 +723,5 @@
     "Pattern",
     "Distributed",
     "GIT"
-  ],
-  "questions": [
-    {
-      "id": 1,
-      "tags": [
-        "JavaScript",
-        "front-end",
-        "ES5"
-      ],
-      "categories": [
-        null
-      ],
-      "categoryIds": [
-        null
-      ],
-      "published": false,
-      "status": 0
-    },
-    {
-      "id": 2,
-      "answers": [
-        {
-          "answerText": "concat()",
-          "correct": false
-        },
-        {
-          "answerText": "every()",
-          "correct": false
-        },
-        {
-          "answerText": "filter()",
-          "correct": false
-        },
-        {
-          "answerText": "forEach()",
-          "correct": true
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "JavaScript",
-        "front-end",
-        "ES5"
-      ],
-      "categories": [],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which of the following function of Array object calls a function for each element in the array?",
-      "explanation": null
-    },
-    {
-      "id": 3,
-      "questionText": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
-      "answers": [
-        {
-          "id": 1,
-          "answerText": "firstIndexOf()",
-          "correct": false
-        },
-        {
-          "id": 2,
-          "answerText": "lastIndexOf()",
-          "correct": false
-        },
-        {
-          "id": 3,
-          "answerText": "indexOf()",
-          "correct": true
-        },
-        {
-          "id": 4,
-          "answerText": "search()",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "JavaScript"
-      ],
-      "categoryIds": [
-        2
-      ]
-    },
-    {
-      "id": 4,
-      "answers": [
-        {
-          "answerText": "valueOf()",
-          "correct": false
-        },
-        {
-          "answerText": "toSource()",
-          "correct": true
-        },
-        {
-          "answerText": "indexOf()",
-          "correct": false
-        },
-        {
-          "answerText": "toString()",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "JavaScript",
-        "Boolean",
-        "JS"
-      ],
-      "categories": [],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
-      "explanation": null
-    },
-    {
-      "id": 5,
-      "questionText": "Which of the following is true about cookie handling in JavaScript?",
-      "answers": [
-        {
-          "id": 1,
-          "answerText": "JavaScript can manipulate cookies using the cookie property of the Document object.",
-          "correct": false
-        },
-        {
-          "id": 2,
-          "answerText": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
-          "correct": false
-        },
-        {
-          "id": 3,
-          "answerText": "All of the above.",
-          "correct": true
-        },
-        {
-          "id": 4,
-          "answerText": "None of the above.",
-          "correct": false
-        }
-      ],
-      "ordered": true,
-      "tags": [
-        "JavaScript",
-        "ES5"
-      ],
-      "categoryIds": [
-        2
-      ]
-    },
-    {
-      "id": 6,
-      "questionText": "What's the best Trivia game?",
-      "answers": [
-        {
-          "id": 1,
-          "answerText": "Quiz Up",
-          "correct": false
-        },
-        {
-          "id": 2,
-          "answerText": "Trivia Crack",
-          "correct": false
-        },
-        {
-          "id": 3,
-          "answerText": "The one I'm playing",
-          "correct": true
-        },
-        {
-          "id": 4,
-          "answerText": "It's subjective",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "gaming"
-      ],
-      "categoryIds": [
-        1
-      ]
-    },
-    {
-      "id": 7,
-      "answers": [
-        {
-          "answerText": "Java",
-          "correct": false
-        },
-        {
-          "answerText": "Jeeva",
-          "correct": true
-        },
-        {
-          "answerText": "Apex",
-          "correct": false
-        },
-        {
-          "answerText": "Visualforce",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "Java",
-        "Salesforce",
-        "Apex",
-        "Visualforce",
-        "SFDC"
-      ],
-      "categories": [],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which is proprietary programming language used by Salesforce.com",
-      "explanation": "Apex is a proprietary language used by Salesforce.com based on the open source Java language."
-    },
-    {
-      "id": 8,
-      "answers": [
-        {
-          "answerText": "C++ and Swift",
-          "correct": false
-        },
-        {
-          "answerText": "Objective-C and Swift",
-          "correct": true
-        },
-        {
-          "answerText": "Java and JavaScript",
-          "correct": false
-        },
-        {
-          "answerText": "HTML and CSS",
-          "correct": false
-        }
-      ],
-      "ordered": true,
-      "tags": [
-        "iOS",
-        "Objective-C",
-        "Swift",
-        "Java",
-        "C",
-        "JavaScript",
-        "iPhone",
-        "Apple",
-        "iPad"
-      ],
-      "categories": [],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "What languages introduced by Apple are used to write Apps for iOS?",
-      "explanation": "Objective-c and Swift are the two proprietary programming languages developed by Apple. Apple is a mastermind in trapping you in their ecosystem by producing brilliant products."
-    },
-    {
-      "id": 9,
-      "answers": [
-        {
-          "answerText": "Floating Action Button (FAB)s",
-          "correct": false
-        },
-        {
-          "answerText": "Raised Buttons",
-          "correct": false
-        },
-        {
-          "answerText": "Flat Buttons and Icon Buttons",
-          "correct": true
-        },
-        {
-          "answerText": "Emphasized Buttons",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "UI",
-        "UX",
-        "Material Design"
-      ],
-      "categories": [],
-      "categoryIds": [
-        7
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "What are few best possible options for destructive actions on the UI?",
-      "explanation": "There are a couple of options possible for the destructive actions. But for sure you shouldn't use FABs, Raised or Emphasized Buttons for destructive actions."
-    },
-    {
-      "id": 10,
-      "answers": [
-        {
-          "answerText": "Git and BitBucket",
-          "correct": false
-        },
-        {
-          "answerText": "Git and GitLab",
-          "correct": false
-        },
-        {
-          "answerText": "SVN and GitHub",
-          "correct": false
-        },
-        {
-          "answerText": "Git and GitHub",
-          "correct": true
-        }
-      ],
-      "ordered": true,
-      "tags": [
-        "GIT",
-        "GitHub",
-        "Version Control"
-      ],
-      "categories": [],
-      "categoryIds": [
-        6
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which tool is the most widely used version control tool and code hosting platform?",
-      "explanation": "As per my knowledge, Git and GitHub are the most widely used Version Control tool and Code Platform combinations across the developer forums and stuff."
-    },
-    {
-      "id": 11,
-      "answers": [
-        {
-          "answerText": "Redux",
-          "correct": true
-        },
-        {
-          "answerText": "Redux Middleware",
-          "correct": false
-        },
-        {
-          "answerText": "RxJS",
-          "correct": false
-        },
-        {
-          "answerText": "Observable",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "Redux",
-        "React",
-        "State"
-      ],
-      "categories": [],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which is the state management software used by React or Angular?",
-      "explanation": "Redux is the state management software provides patterns for neat data handling in the application."
-    },
-    {
-      "id": 12,
-      "answers": [
-        {
-          "answerText": "Singleton",
-          "correct": true
-        },
-        {
-          "answerText": "MultipleTon",
-          "correct": false
-        },
-        {
-          "answerText": "Facade",
-          "correct": false
-        },
-        {
-          "answerText": "Observer Pattern",
-          "correct": false
-        }
-      ],
-      "ordered": true,
-      "tags": [
-        "Pattern",
-        "Object Oriented Principles",
-        "Java"
-      ],
-      "categories": [],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which design pattern would you use to initialize the object once during the entire application lifecycle?",
-      "explanation": null
-    },
-    {
-      "id": 19,
-      "answers": [
-        {
-          "answerText": "They are awesome",
-          "correct": false
-        },
-        {
-          "answerText": "They facilitate easier and type-safe action creation framework",
-          "correct": true
-        },
-        {
-          "answerText": "They are not so good",
-          "correct": false
-        },
-        {
-          "answerText": "They are not as useful as the class based action creators",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "Actions",
-        "Ngrx",
-        "Store"
-      ],
-      "categories": [
-        {
-          "id": 1,
-          "categoryName": "Special"
-        }
-      ],
-      "categoryIds": [
-        1
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "What is so special about Actions in Ngrx?",
-      "explanation": null
-    },
-    {
-      "id": 20,
-      "answers": [
-        {
-          "answerText": "Ternary Trees",
-          "correct": false
-        },
-        {
-          "answerText": "Binary Trees",
-          "correct": false
-        },
-        {
-          "answerText": "Unary Trees",
-          "correct": false
-        },
-        {
-          "answerText": "Linked Lists",
-          "correct": true
-        }
-      ],
-      "ordered": true,
-      "tags": [
-        "Data",
-        "Data Structures",
-        "Trees"
-      ],
-      "categories": [
-        {
-          "id": 2,
-          "categoryName": "Programming"
-        }
-      ],
-      "categoryIds": [
-        2
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which is the best data structure used for dictionary?",
-      "explanation": null
-    },
-    {
-      "id": 21,
-      "answers": [
-        {
-          "answerText": "test 1",
-          "correct": false
-        },
-        {
-          "answerText": "test 2",
-          "correct": false
-        },
-        {
-          "answerText": "test 3",
-          "correct": false
-        },
-        {
-          "answerText": "test 4 correct answer",
-          "correct": true
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "asd",
-        "asdfas",
-        "sdfa"
-      ],
-      "categories": [
-        {
-          "id": 4,
-          "categoryName": "Networking/Infrastructure"
-        }
-      ],
-      "categoryIds": [
-        4
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "This is a test question that we have added to make use of the August 31 at 1:48 AM?",
-      "explanation": "asd"
-    },
-    {
-      "id": 22,
-      "answers": [
-        {
-          "answerText": "SELECT *",
-          "correct": true
-        },
-        {
-          "answerText": "SELECT ALL",
-          "correct": false
-        },
-        {
-          "answerText": "SELECT _",
-          "correct": false
-        },
-        {
-          "answerText": "SELECT ..fields",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "SQL",
-        "1",
-        "2",
-        "3"
-      ],
-      "categories": [
-        {
-          "id": 5,
-          "categoryName": "Database"
-        }
-      ],
-      "categoryIds": [
-        5
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which query would retrieve all the fields from a table in SQL?",
-      "explanation": "SELECT * FROM Account - would give all the fields in the object from the Table."
-    }
   ]
 }

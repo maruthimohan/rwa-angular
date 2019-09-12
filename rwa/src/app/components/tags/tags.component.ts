@@ -12,7 +12,7 @@ import {AppStore} from '../../store/app-store';
   styleUrls: ['./tags.component.scss']
 })
 export class TagsComponent implements OnInit, OnDestroy {
-  tags: string[];
+  tags: string[] = [];
   store$: Observable<AppStore>;
   sub: any;
 

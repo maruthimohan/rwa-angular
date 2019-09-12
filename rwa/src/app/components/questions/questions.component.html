@@ -1,4 +1,4 @@
-<mat-card *ngIf="categoriesDictionary != null && questions != null">
+<mat-card *ngIf="questions && questions.length > 0 && Object.keys(categoriesDictionary).length > 0">
     <!-- <button md-fab class="page-action" [routerLink]="['/question/add']">
       <mat-icon class="mat-24" [routerLink]="['/question/add']">add</mat-icon>
     </button> -->

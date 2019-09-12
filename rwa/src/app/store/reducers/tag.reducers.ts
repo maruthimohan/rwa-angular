@@ -7,8 +7,8 @@ const tagReducer = createReducer(
     initialStateTags,
     on(
         TagActions.loadTagsSuccessAction,
-        (state, { tags }) => {
-            return tags;
+        (state, tagsPayload) => {
+            return tagsPayload.tags;
         }
     )
 );
