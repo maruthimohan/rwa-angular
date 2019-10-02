@@ -382,8 +382,11 @@
         "React",
         "State"
       ],
+      "categories": [
+        null
+      ],
       "categoryIds": [
-        7
+        6
       ],
       "published": false,
       "status": 0
@@ -500,6 +503,7 @@
       ]
     },
     {
+      "id": 21,
       "answers": [
         {
           "answerText": "test 1",
@@ -518,6 +522,12 @@
           "correct": true
         }
       ],
+      "ordered": false,
+      "tags": [
+        "asd",
+        "asdfas",
+        "sdfa"
+      ],
       "categories": [
         {
           "categoryName": "Networking/Infrastructure",
@@ -527,58 +537,10 @@
       "categoryIds": [
         4
       ],
-      "explanation": "asd",
-      "id": 21,
-      "ordered": false,
       "published": false,
+      "status": 0,
       "questionText": "This is a test question that we have added to make use of the August 31 at 1:48 AM?",
-      "status": 0,
-      "tags": [
-        "asd",
-        "asdfas",
-        "sdfa"
-      ]
-    },
-    {
-      "id": 22,
-      "answers": [
-        {
-          "answerText": "SELECT *",
-          "correct": true
-        },
-        {
-          "answerText": "SELECT ALL",
-          "correct": false
-        },
-        {
-          "answerText": "SELECT _",
-          "correct": false
-        },
-        {
-          "answerText": "SELECT ..fields",
-          "correct": false
-        }
-      ],
-      "ordered": false,
-      "tags": [
-        "SQL",
-        "1",
-        "2",
-        "3"
-      ],
-      "categories": [
-        {
-          "categoryName": "Database",
-          "id": 5
-        }
-      ],
-      "categoryIds": [
-        5
-      ],
-      "published": false,
-      "status": 0,
-      "questionText": "Which query would retrieve all the fields from a table in SQL?",
-      "explanation": "SELECT * FROM Account - would give all the fields in the object from the Table."
+      "explanation": "asd"
     }
   ],
   "tagList": [

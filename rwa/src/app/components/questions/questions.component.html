@@ -37,14 +37,14 @@
                         matTooltip="Edit this Question"
                         [matTooltipPosition]="'above'"
                         [routerLink]="['/question/add']" routerLinkActive="router-link-active"
-                        [queryParams]="{ question_id: question.id }"
+                        [queryParams]="{ question_id: question.key }"
                         [ngClass]="{'add-question': true}">
                     <mat-icon>edit</mat-icon>
                 </button>
                 <button mat-icon-button
                         matTooltip="Delete this Question"
                         [matTooltipPosition]="'above'"
-                        (click)="deleteQuestion((question.id))"
+                        (click)="deleteQuestion(question.key)"
                         [ngClass]="{'delete-question': true}">
                     <mat-icon>delete</mat-icon>
                 </button>

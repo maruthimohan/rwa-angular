@@ -46,6 +46,8 @@ export class QuestionsComponent implements OnInit, OnDestroy {
         //     .subscribe(questions => this.questions = questions);
         this.sub = this.store$.subscribe((questions) => {
             this.questions = questions;
+            console.log('Question retrieved from the Store');
+            console.log(this.questions);
         });
         this.categoriesDict$.subscribe((dictionary) => {
             this.categoriesDictionary = dictionary;
@@ -87,6 +89,7 @@ export class QuestionsComponent implements OnInit, OnDestroy {
                 );
             }
         );
+        // console.log(questionId);
     }
 
     ngOnDestroy() {
@@ -95,4 +98,7 @@ export class QuestionsComponent implements OnInit, OnDestroy {
         }
     }
 
+    getStringValue(key: number) {
+        return String(key);
+    }
 }

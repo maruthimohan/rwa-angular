@@ -36,6 +36,7 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
     questionForm: FormGroup = new FormGroup({});
     question: Question;
     preselectedQuestion: Question;
+    questionIndex: string;
 
     store$: Observable<AppStore>;
 
@@ -73,6 +74,7 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
         ).subscribe(
             param => {
                 questionID = param;
+                this.questionIndex = param;
                 // Get the questions if the ID is null
                 // If the ID is not null, fetch the Questions from backend
                 // this.getQuestion(questionID).subscribe(
@@ -101,18 +103,19 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
                 // Subscribe to the Store and populate the tags, components and get the question
                 this.store$.subscribe(
                     store => {
-                        if (questionID !== null) {
-                            // Iterate over the questions and get the question with the same ID
-                            store.questions.forEach((question) => {
-                                // tslint:disable-next-line:radix
-                                if (question.id === +questionID) {
-                                    this.preselectedQuestion = question;
-                                }
-                            });
-                        }
                         // Load Tags and Categories from the store
                         this.tags = store.tags;
                         this.categories = store.categories;
+                        if (questionID !== null) {
+                            // Iterate over the questions and get the question with the same ID
+                            store.questions.forEach((question, index) => {
+                                // tslint:disable-next-line:radix
+                                if (question.key === questionID) {
+                                    this.preselectedQuestion = question;
+                                    this.initializeCategories(this.preselectedQuestion);
+                                }
+                            });
+                        }
                         // Send the question retrieved as a part of body to the form initializer
                         this.initializeForm(this.preselectedQuestion);
                     }
@@ -125,6 +128,19 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
             .subscribe(categories => (this.categories = categories));
 
         this.sub2 = this.tagService.getTags().subscribe(tags => (this.tags = tags));*/
+    }
+
+    initializeCategories(question: Question) {
+        // Initialize the Categories with an empty array and fill that with appropriate Category using the ID
+        if (question != null) {
+            question.categories = [];
+            // Populate the categories for each category ID
+            question.categoryIds.forEach((categoryId) => {
+                question.categories.push(
+                    this.categories.find(category => category.id === categoryId)
+                );
+            });
+        }
     }
 
     initializeForm(question: Question) {
@@ -240,7 +256,7 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
             });*/
 
             // Dispatch the intent to update the question in the store
-            this.store.dispatch(QuestionActions.updateQuestion({question}));
+            this.store.dispatch(QuestionActions.updateQuestion({key: this.questionIndex, questionObject: question}));
             // Wait for the Question to get updated in the backend
             // Show a snack bar and navigate to the Questions page
             this.store.select(store => store.questionSaveStatus ).pipe(
@@ -315,6 +331,14 @@ export class QuestionAddUpdateComponent implements OnInit, OnDestroy {
     }
 
     createForm(question: Question) {
+        // initialize with defaults if any of the properties are not initialized
+        if (question.answers === null || question.answers === undefined) {
+            question.answers = [ new Answer(), new Answer(), new Answer(), new Answer()];
+        }
+        if (question.tags === null || question.tags === undefined) {
+            question.tags = [];
+        }
+
         const fgs: FormGroup[] = question.answers.map(answer => {
             const fg = new FormGroup({
                 answerText: new FormControl(answer.answerText, Validators.required),

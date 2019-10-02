@@ -32,12 +32,12 @@ export class QuestionEffects {
             mergeMap(( questionToCreate) => {
                     return this.questionService.saveQuestion(questionToCreate.question)
                         .pipe(
-                            map((question) => {
-                                    // Set the received ID to the question object
-                                    const questionAdded: Question = questionToCreate.question;
-                                    questionAdded.id = question.id;
-                                    // Generate new question added event with Question to add event
-                                    return QuestionActions.addQuestionSuccess({question: questionAdded});
+                            map(() => {
+                                    // // Set the received ID to the question object
+                                    // const questionAdded: Question = questionToCreate.question;
+                                    // questionAdded.id = question.id;
+                                    // // Generate new question added event with Question to add event
+                                    return QuestionActions.addQuestionSuccess();
                                 }
                             ),
                             catchError(() => EMPTY)
@@ -52,10 +52,10 @@ export class QuestionEffects {
             return this.actions$.pipe(
                 ofType(QuestionActions.updateQuestion),
                 mergeMap((updateQuestionPayload) => {
-                    return this.questionService.updateQuestion(updateQuestionPayload.question)
+                    return this.questionService.updateQuestion(updateQuestionPayload.key, updateQuestionPayload.questionObject)
                         .pipe(
-                            map((questionResult) => {
-                                return QuestionActions.updateQuestionSuccess({ question: questionResult });
+                            map(() => {
+                                return QuestionActions.updateQuestionSuccess();
                             }),
                             catchError(() => EMPTY)
                         );
@@ -69,7 +69,7 @@ export class QuestionEffects {
             return this.actions$.pipe(
                 ofType(QuestionActions.deleteQuestion),
                 mergeMap((actionPayload) => {
-                    return this.questionService.deleteQuestion(actionPayload.questionId)
+                    return this.questionService.deleteQuestion(`${actionPayload.questionId}`)
                         .pipe(
                             map(() => {
                                 return QuestionActions.deleteQuestionSuccess({ questionId: actionPayload.questionId });

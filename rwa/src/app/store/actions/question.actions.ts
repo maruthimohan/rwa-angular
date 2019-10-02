@@ -25,8 +25,7 @@ export const addQuestion = createAction(
 );
 
 export const addQuestionSuccess = createAction(
-    ADD_QUESTION_SUCCESS,
-    props<{ question: Question }>()
+    ADD_QUESTION_SUCCESS
 );
 
 export const deleteQuestion = createAction(
@@ -41,12 +40,11 @@ export const deleteQuestionSuccess = createAction(
 
 export const updateQuestion = createAction(
     UPDATE_QUESTION,
-    props<{ question: Question }>()
+    props<{ questionObject: Question, key: string }>()
 );
 
 export const updateQuestionSuccess = createAction(
-    UPDATE_QUESTION_SUCCESS,
-    props<{ question: Question }>()
+    UPDATE_QUESTION_SUCCESS
 );
 
 

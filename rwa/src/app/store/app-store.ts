@@ -1,4 +1,4 @@
-import {Category, Question} from '../model';
+import {Category, Question, User} from '../model';
 import {CategoryReducers} from './reducers';
 import {combineReducers, compose} from '@ngrx/store';
 
@@ -9,6 +9,7 @@ export interface  AppStore {
     questions: Question[];
     questionSaveStatus: string;
     questionDeleteStatus: string;
+    user: User;
 }
 
 export default compose(combineReducers)({

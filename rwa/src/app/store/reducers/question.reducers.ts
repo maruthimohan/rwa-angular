@@ -17,10 +17,10 @@ export const questionReducer = createReducer(
     on(
         QuestionActions.addQuestionSuccess,
         (state, questionReceived) => {
-            const deepClonedState = _.cloneDeep(state);
-            // Add the newly added question to the Store
-            deepClonedState.push(questionReceived.question);
-            return deepClonedState;
+            // const deepClonedState = _.cloneDeep(state);
+            // // Add the newly added question to the Store
+            // deepClonedState.push(questionReceived.questionObject);
+            return state;
         }
     ),
     on(
@@ -38,15 +38,15 @@ export const questionReducer = createReducer(
         (state, actionPayload) => {
             // Clone the questions property and for each the questions list
             // Update the question record whose id matches the updated question
-            const deepClonedQuestions = _.cloneDeep(state);
-            const nextState = deepClonedQuestions.map((question) => {
-                if (question.id === actionPayload.question.id) {
-                    return actionPayload.question;
-                }
-                // Return default
-                return question;
-            });
-            return nextState;
+            // const deepClonedQuestions = _.cloneDeep(state);
+            //             // const nextState = deepClonedQuestions.map((question) => {
+            //             //     if (question.id === actionPayload.question.id) {
+            //             //         return actionPayload.question;
+            //             //     }
+            //             //     // Return default
+            //             //     return question;
+            //             // });
+            return state;
         }
     )
 );
@@ -56,14 +56,14 @@ export const questionSaveStateReducer = createReducer(
     on(
         QuestionActions.addQuestion,
         QuestionActions.updateQuestion,
-        (state, {question}) => {
+        (state) => {
             return 'IN_PROGRESS';
         }
     ),
     on(
         QuestionActions.addQuestionSuccess,
         QuestionActions.updateQuestionSuccess,
-        (state, {question}) => {
+        (state) => {
             return 'SUCCESS';
         }
     )

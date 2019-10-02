@@ -23,12 +23,16 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 
 import {CategoryActions} from './store/actions';
-import {CategoryReducers, TagReducers, QuestionReducers} from './store/reducers';
+import {CategoryReducers, TagReducers, QuestionReducers, UserReducers} from './store/reducers';
 import {CategoryEffects, TagEffects, QuestionEffects} from './store/effects';
 import {default as reducer} from './store/app-store';
-import {AngularFireModule} from '@angular/fire';
+import {AngularFireModule, FirebaseApp} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { LoginComponent } from './components/login/login.component';
+
+import * as firebase from 'firebase';
+import { PasswordAuthComponent } from './components/login/password-auth/password-auth.component';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCFA2RFVAYZAfUaiwx_sjAuLYGPGoPuA-w',
@@ -47,7 +51,9 @@ export const firebaseConfig = {
         CategoriesComponent,
         TagsComponent,
         QuestionAddUpdateComponent,
-        CustomSnackBarComponent
+        CustomSnackBarComponent,
+        LoginComponent,
+        PasswordAuthComponent
     ],
     imports: [
         BrowserModule,
@@ -62,7 +68,7 @@ export const firebaseConfig = {
         MaterialModule,
         FlexLayoutModule,
 
-        AngularFireModule.initializeApp(firebaseConfig, 'rwa-angular'),
+        AngularFireModule.initializeApp(firebaseConfig),
         AngularFireDatabaseModule,
 
         StoreModule.forRoot({
@@ -71,13 +77,16 @@ export const firebaseConfig = {
             categoriesDictionary: CategoryReducers.dictReducer,
             questions: QuestionReducers.reducer,
             questionSaveStatus: QuestionReducers.questionSaveReducer,
-            questionDeleteStatus: QuestionReducers.questionDeleteReducer
+            questionDeleteStatus: QuestionReducers.questionDeleteReducer,
+            user: UserReducers.reducer
         }),
 
         EffectsModule.forRoot([CategoryEffects, TagEffects, QuestionEffects])
     ],
     entryComponents: [
-        CustomSnackBarComponent
+        CustomSnackBarComponent,
+        LoginComponent,
+        PasswordAuthComponent
     ],
     providers: [
         CategoryService, TagService, QuestionService
