@@ -1,4 +1,3 @@
-import {Injectable} from '@angular/core';
 import {Action, createAction, props} from '@ngrx/store';
 import {Category} from '../../model';
 

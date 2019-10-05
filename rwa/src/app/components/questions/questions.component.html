@@ -1,49 +1,54 @@
-<mat-card>
-  <!-- <button md-fab class="page-action" [routerLink]="['/question/add']">
-    <mat-icon class="mat-24" [routerLink]="['/question/add']">add</mat-icon>
-  </button> -->
-  <button mat-fab class="page-action" [routerLink]="['/question/add']">Add</button>
-  <mat-card-title>Questions</mat-card-title>
-  <mat-card-content class="flex-container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutAlign.xs="start">
-    <mat-card *ngFor="let question of questions" class="flex-item question-card">
-      <mat-card-header>
-        <mat-card-title>
-          <span *ngFor="let category of question.categories">
-            {{category.categoryName}}
+<mat-card *ngIf="questions && questions.length > 0 && Object.keys(categoriesDictionary).length > 0">
+    <!-- <button md-fab class="page-action" [routerLink]="['/question/add']">
+      <mat-icon class="mat-24" [routerLink]="['/question/add']">add</mat-icon>
+    </button> -->
+    <button mat-fab class="page-action" [routerLink]="['/question/add']">Add</button>
+    <mat-card-title>Questions</mat-card-title>
+    <mat-card-content class="flex-container"
+                      fxLayout="row wrap"
+                      fxLayoutAlign="center"
+                      fxLayoutAlign.xs="start">
+        <mat-card *ngFor="let question of questions" class="flex-item question-card">
+            <mat-card-header>
+                <mat-card-title>
+          <span *ngFor="let categoryId of question.categoryIds">
+            {{categoriesDictionary[categoryId].categoryName}}
           </span>
-        </mat-card-title>
-        <mat-card-subtitle>
-          {{question.questionText}}
-        </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-list dense>
-          <mat-list-item *ngFor="let answer of question.answers">
-            {{answer.answerText}}<mat-icon *ngIf="answer.correct" md-list-icon>check</mat-icon>
-          </mat-list-item>
-        </mat-list>
-        <mat-chip-list>
-          <mat-chip *ngFor="let tag of question.tags">
-            {{tag}}
-          </mat-chip>
-        </mat-chip-list>
-      </mat-card-content>
-      <mat-card-actions [ngClass]="{'question-actions' : true}">
-        <button mat-icon-button
-                matTooltip="Edit this Question"
-                [matTooltipPosition]="'above'"
-                [routerLink]="['/question/add']" routerLinkActive="router-link-active" [queryParams]="{ question_id: question.id }"
-                [ngClass]="{'add-question': true}">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-icon-button
-                matTooltip="Delete this Question"
-                [matTooltipPosition]="'above'"
-                (click)="deleteQuestion(question.id)"
-                [ngClass]="{'delete-question': true}">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-card-content>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{question.questionText}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list dense>
+                    <mat-list-item *ngFor="let answer of question.answers">
+                        {{answer.answerText}}
+                        <mat-icon *ngIf="answer.correct" md-list-icon>check</mat-icon>
+                    </mat-list-item>
+                </mat-list>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let tag of question.tags">
+                        {{tag}}
+                    </mat-chip>
+                </mat-chip-list>
+            </mat-card-content>
+            <mat-card-actions [ngClass]="{'question-actions' : true}">
+                <button mat-icon-button
+                        matTooltip="Edit this Question"
+                        [matTooltipPosition]="'above'"
+                        [routerLink]="['/question/add']" routerLinkActive="router-link-active"
+                        [queryParams]="{ question_id: question.key }"
+                        [ngClass]="{'add-question': true}">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button
+                        matTooltip="Delete this Question"
+                        [matTooltipPosition]="'above'"
+                        (click)="deleteQuestion(question.key)"
+                        [ngClass]="{'delete-question': true}">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-card-content>
 </mat-card>

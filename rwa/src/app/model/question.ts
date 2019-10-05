@@ -2,6 +2,7 @@ import { Category } from './category';
 
 export class Question {
   id: number;
+  key: string;
   questionText: string;
   answers: Answer[];
   ordered: boolean;
@@ -20,6 +21,7 @@ export class Question {
 
   constructor() {
     this.id = 0;
+    this.key = '';
     this.answers = [new Answer(), new Answer(), new Answer(), new Answer()];
     this.ordered = false;
     this.tags = [];
