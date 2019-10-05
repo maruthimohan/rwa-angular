@@ -20,6 +20,7 @@ export class PasswordAuthComponent implements OnInit {
     signupForm: FormGroup;
     signinForm: FormGroup;
     forgotPasswordForm: FormGroup;
+    isForgotPasswordEmailSent: boolean;
 
     constructor(private fb: FormBuilder,
                 public dialogRef: MatDialogRef<PasswordAuthComponent>) {
@@ -68,6 +69,8 @@ export class PasswordAuthComponent implements OnInit {
         ).then(
             (user: UserCredential) => {
                 console.log('User login with Email and Password Successful!');
+                // close the popup for the case of the username and password
+                this.dialogRef.close();
             },
             (error: Error) => {
                 // error
@@ -97,7 +100,11 @@ export class PasswordAuthComponent implements OnInit {
         firebase.auth().createUserWithEmailAndPassword(
             email,
             password
-        )
+        ).then((user: UserCredential) => {
+            console.log('User signup successfully completed');
+            // close the popup for the case of the username and password
+            this.dialogRef.close();
+        })
             .catch((error) => {
                 // Handle Errors here.
                 const errorCode = error.code;
@@ -116,9 +123,11 @@ export class PasswordAuthComponent implements OnInit {
         firebase.auth().sendPasswordResetEmail(this.forgotPasswordForm.get('email').value)
             .then((a: any) => {
                 console.log(a);
+                this.isForgotPasswordEmailSent = true;
             },
             (error: Error) => {
                 console.log(error);
+                this.isForgotPasswordEmailSent = false;
             }
         );
     }
